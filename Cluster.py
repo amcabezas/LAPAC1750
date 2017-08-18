@@ -18,7 +18,7 @@ display.start()
 driver = webdriver.Chrome('/usr/bin/chromedriver')
 driver.implicitly_wait(30)
 # IP de Linksys LAPAC1750 Cluster. 
-base_url = "http://192.168.69.181/"
+base_url = "http://IP/"
 driver.get(base_url)
 #Busca las etiquetas e introduce usuario y contraseña.
 driver.find_element_by_name("login_name").clear()
@@ -34,16 +34,9 @@ html = BeautifulSoup(web,'lxml')
 tabla = html.find_all('tr', attrs={'class':'section-row'})
 i = 0
 for row in tabla:
-    #print row.getText()
     i = i+1
 
 print i,report
 
-#def grabartxt():
-#    archi=open('/home/ieb/Recolector/datos-ag.txt','a')
-#    archi.write(str(i)+';'+str(report)+'\n')
-#    archi.close()
-
-#grabartxt()
 driver.quit()
 display.stop()
