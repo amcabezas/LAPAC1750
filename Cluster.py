@@ -29,7 +29,7 @@ driver.find_element_by_css_selector("input[name=\"login\"]").click()
 driver.get(base_url+'Cluster_client.htm')
 #Vemos el código fuente de la página.
 web = driver.page_source.encode('utf-8')
-#Luego buscamos las etiquetas que poseen los campos de los clientes conectados y los recorremos para realizar la contarlos.
+#Luego buscamos las etiquetas que poseen los campos de los clientes conectados y los recorremos para contarlos.
 html = BeautifulSoup(web,'lxml')
 tabla = html.find_all('tr', attrs={'class':'section-row'})
 i = 0
