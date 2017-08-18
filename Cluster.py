@@ -22,9 +22,9 @@ base_url = "http://IP/"
 driver.get(base_url)
 #Busca las etiquetas e introduce usuario y contraseña.
 driver.find_element_by_name("login_name").clear()
-driver.find_element_by_name("login_name").send_keys("sistemas")
+driver.find_element_by_name("login_name").send_keys("usuario")
 driver.find_element_by_name("login_pwd").clear()
-driver.find_element_by_name("login_pwd").send_keys("iebsistemas")
+driver.find_element_by_name("login_pwd").send_keys("password")
 driver.find_element_by_css_selector("input[name=\"login\"]").click()
 driver.get(base_url+'Cluster_client.htm')
 #Vemos el código fuente de la página.
